@@ -40,7 +40,7 @@ const Main = () => {
     const handleShow = () => {
         setLoading(false)
     }
-    const handleHide=()=>{
+    const handleHide = () => {
         setLoading(true)
     }
 
@@ -49,13 +49,13 @@ const Main = () => {
     const handleShowOffcanava = () => setShow(true);
 
 
-    const callApi = async () => {
-        const fetchData = await apiResponse();
-        console.log("data------", fetchData);
-    }
-    useEffect(() => {
-        callApi();
-    }, [])
+    // const callApi = async () => {
+    //     const fetchData = await apiResponse();
+    //     console.log("data------", fetchData);
+    // }
+    // useEffect(() => {
+    //     callApi();
+    // }, [])
 
     return (
         <>
@@ -66,7 +66,7 @@ const Main = () => {
                             <Card className="mt-3" style={{ backgroundColor: "white", boxShadow: "0 1px 6px 0px gray" }}>
                                 <Row>
                                     <Col lg={2}>
-                                        <Avatar alt="Remy Sharp" sx={{ width: 60, height: 60 }} src={userImg} className="mt-2" />
+                                        <Avatar alt="Remy Sharp" sx={{ width: 60, height: 60 }} src={userImg} className="mt-2 mx-2" />
                                     </Col>
                                     <Col lg={10} >
                                         <Card.Body>
@@ -107,7 +107,7 @@ const Main = () => {
                                                     <Card className="mt-3 mb-3" style={{ backgroundColor: "white", boxShadow: "0 1px 6px 0px gray" }}>
                                                         <Row>
                                                             <Col lg={2}>
-                                                                <Avatar alt="Remy Sharp" sx={{ width: 60, height: 60 }} src={userImg} className="mt-2" />
+                                                                <Avatar alt="Remy Sharp" sx={{ width: 60, height: 60 }} src={userImg} className="mt-2 mx-3" />
                                                             </Col>
                                                             <Col lg={10} >
                                                                 <Card.Body>
@@ -141,7 +141,6 @@ const Main = () => {
                                 <Pagination.Last />
                             </Pagination>
                         </Col>
-
                     </Row>
                 </Container>
 

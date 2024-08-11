@@ -1,25 +1,27 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useRef, useState } from "react";
 import Main from "./components/Main";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import ToggleCard from "./components/ToggleCard";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ContactForm from "./components/ContactForm";
-import { Api } from "@mui/icons-material";
+import Header from "./components/Header";
+import Login from "./components/Login";
+import Skills from "./components/Skills";
+import HomePage from "./components/HomePage";
 export const gloableData = createContext();
 const App = () => {
-  const [cards, setCards]=useState()
+
   return (
     <>
       <BrowserRouter>
         <Routes>
-        <Route path="/" element={ <Main />}/>
-        <Route path="/viewToggle" element={  <ToggleCard/>}/>
-        <Route path="/contact_us" element={  <ContactForm/>}/>
+          <Route path="/" element={<Header />}>
+            <Route index element ={<HomePage/>}/>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/skills" element={<Skills/>}/>
+            <Route path="/login" element={<Login/>}/>
+          </Route>
         </Routes>
       </BrowserRouter>
-
-     
     </>
   )
 }

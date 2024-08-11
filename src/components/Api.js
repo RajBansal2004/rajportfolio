@@ -6,7 +6,7 @@ const headers={
 }
 
 const apiResponse=async (url)=>{
-    const {data}=await axios.post(baseUrl+""+url,{headers:headers})
+    const {data}=await axios.post (baseUrl+""+url,{headers:headers})
     console.log("main data--------------",data);
     return data;
 }

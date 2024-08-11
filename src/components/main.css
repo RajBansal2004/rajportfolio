@@ -1,0 +1,9 @@
+.header:hover{
+    border-bottom: 2px solid white;
+}
+.service:hover{
+    border: 3px solid white;
+}
+.project:hover{
+    border: 3px solid white;
+}

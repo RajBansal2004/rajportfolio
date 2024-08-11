@@ -52,7 +52,6 @@ const ContactForm = () => {
                     </Col>
                     <Col lg={8}>
                         <form className="" >
-
                             <h6 className="text-center text-dark mt-3"><b>Thank You so much taking the time</b></h6>
                             <Form.Group className="mb-3" >
                                 <Form.Label>First Name*</Form.Label>
